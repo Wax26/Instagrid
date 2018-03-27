@@ -12,6 +12,9 @@
 		FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68372206ABE3300839BF0 /* Main.storyboard */; };
 		FEA68376206ABE3300839BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA68375206ABE3300839BF0 /* Assets.xcassets */; };
 		FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */; };
+		FEA68386206AC2D200839BF0 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */; };
+		FEA68388206AC2E100839BF0 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68387206AC2E100839BF0 /* Delm-Medium.otf */; };
+		FEA6838D206AC55400839BF0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA6838C206AC55400839BF0 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		FEA68378206ABE3300839BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEA6837A206ABE3300839BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA68383206ABEDD00839BF0 /* Instagrid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instagrid.entitlements; sourceTree = "<group>"; };
+		FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		FEA68387206AC2E100839BF0 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		FEA6838C206AC55400839BF0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 		FEA68362206ABE3200839BF0 = {
 			isa = PBXGroup;
 			children = (
+				FEA6838C206AC55400839BF0 /* Default-568h@2x.png */,
 				FEA6836D206ABE3300839BF0 /* Instagrid */,
 				FEA6836C206ABE3300839BF0 /* Products */,
 				FEA68380206ABEC300839BF0 /* Frameworks */,
@@ -56,13 +63,13 @@
 		FEA6836D206ABE3300839BF0 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				FEA68375206ABE3300839BF0 /* Assets.xcassets */,
 				FEA68383206ABEDD00839BF0 /* Instagrid.entitlements */,
 				FEA6836E206ABE3300839BF0 /* AppDelegate.swift */,
-				FEA68370206ABE3300839BF0 /* ViewController.swift */,
-				FEA68372206ABE3300839BF0 /* Main.storyboard */,
-				FEA68375206ABE3300839BF0 /* Assets.xcassets */,
+				FEA6838A206AC32F00839BF0 /* Controller */,
+				FEA6838B206AC34D00839BF0 /* View */,
 				FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */,
-				FEA6837A206ABE3300839BF0 /* Info.plist */,
+				FEA68389206AC30D00839BF0 /* Supporting Files */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -72,6 +79,32 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEA68389206AC30D00839BF0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */,
+				FEA68387206AC2E100839BF0 /* Delm-Medium.otf */,
+				FEA6837A206ABE3300839BF0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FEA6838A206AC32F00839BF0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FEA68370206ABE3300839BF0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FEA6838B206AC34D00839BF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEA68372206ABE3300839BF0 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */,
+				FEA68388206AC2E100839BF0 /* Delm-Medium.otf in Resources */,
 				FEA68376206ABE3300839BF0 /* Assets.xcassets in Resources */,
+				FEA68386206AC2D200839BF0 /* ThirstySoftRegular.otf in Resources */,
 				FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */,
+				FEA6838D206AC55400839BF0 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
