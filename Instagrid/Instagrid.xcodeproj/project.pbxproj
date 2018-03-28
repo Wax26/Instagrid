@@ -63,9 +63,7 @@
 		FEA6836D206ABE3300839BF0 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				FEA68375206ABE3300839BF0 /* Assets.xcassets */,
 				FEA68383206ABEDD00839BF0 /* Instagrid.entitlements */,
-				FEA6836E206ABE3300839BF0 /* AppDelegate.swift */,
 				FEA6838A206AC32F00839BF0 /* Controller */,
 				FEA6838B206AC34D00839BF0 /* View */,
 				FEA68389206AC30D00839BF0 /* Supporting Files */,
@@ -84,7 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */,
+				FEA68375206ABE3300839BF0 /* Assets.xcassets */,
 				FEA68387206AC2E100839BF0 /* Delm-Medium.otf */,
+				FEA6836E206ABE3300839BF0 /* AppDelegate.swift */,
 				FEA6837A206ABE3300839BF0 /* Info.plist */,
 			);
 			path = "Supporting Files";
