@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2839C72080E46B00C88086 /* CentralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2839C62080E46B00C88086 /* CentralView.swift */; };
 		FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6836E206ABE3300839BF0 /* AppDelegate.swift */; };
 		FEA68371206ABE3300839BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA68370206ABE3300839BF0 /* ViewController.swift */; };
 		FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68372206ABE3300839BF0 /* Main.storyboard */; };
@@ -14,10 +15,10 @@
 		FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */; };
 		FEA68386206AC2D200839BF0 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */; };
 		FEA68388206AC2E100839BF0 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68387206AC2E100839BF0 /* Delm-Medium.otf */; };
-		FEA6838D206AC55400839BF0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA6838C206AC55400839BF0 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2839C62080E46B00C88086 /* CentralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CentralView.swift; path = Instagrid/View/CentralView.swift; sourceTree = SOURCE_ROOT; };
 		FEA6836B206ABE3300839BF0 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA6836E206ABE3300839BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEA68370206ABE3300839BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,10 +26,8 @@
 		FEA68375206ABE3300839BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEA68378206ABE3300839BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEA6837A206ABE3300839BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEA68383206ABEDD00839BF0 /* Instagrid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instagrid.entitlements; sourceTree = "<group>"; };
 		FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		FEA68387206AC2E100839BF0 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		FEA6838C206AC55400839BF0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +44,6 @@
 		FEA68362206ABE3200839BF0 = {
 			isa = PBXGroup;
 			children = (
-				FEA6838C206AC55400839BF0 /* Default-568h@2x.png */,
 				FEA6836D206ABE3300839BF0 /* Instagrid */,
 				FEA6836C206ABE3300839BF0 /* Products */,
 				FEA68380206ABEC300839BF0 /* Frameworks */,
@@ -63,8 +61,8 @@
 		FEA6836D206ABE3300839BF0 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				FEA68383206ABEDD00839BF0 /* Instagrid.entitlements */,
 				FEA6838A206AC32F00839BF0 /* Controller */,
+				FEDE2E14206C85F0003082FC /* Model */,
 				FEA6838B206AC34D00839BF0 /* View */,
 				FEA68389206AC30D00839BF0 /* Supporting Files */,
 			);
@@ -86,6 +84,7 @@
 				FEA68387206AC2E100839BF0 /* Delm-Medium.otf */,
 				FEA6836E206ABE3300839BF0 /* AppDelegate.swift */,
 				FEA6837A206ABE3300839BF0 /* Info.plist */,
+				FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -101,10 +100,18 @@
 		FEA6838B206AC34D00839BF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE2839C62080E46B00C88086 /* CentralView.swift */,
 				FEA68372206ABE3300839BF0 /* Main.storyboard */,
-				FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FEDE2E14206C85F0003082FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = Controller/Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +141,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Walim Aloui";
 				TargetAttributes = {
 					FEA6836A206ABE3300839BF0 = {
@@ -152,7 +159,7 @@
 				};
 			};
 			buildConfigurationList = FEA68366206ABE3300839BF0 /* Build configuration list for PBXProject "Instagrid" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -179,7 +186,6 @@
 				FEA68376206ABE3300839BF0 /* Assets.xcassets in Resources */,
 				FEA68386206AC2D200839BF0 /* ThirstySoftRegular.otf in Resources */,
 				FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */,
-				FEA6838D206AC55400839BF0 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2839C72080E46B00C88086 /* CentralView.swift in Sources */,
 				FEA68371206ABE3300839BF0 /* ViewController.swift in Sources */,
 				FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */,
 			);
@@ -231,6 +238,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -238,6 +246,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -265,11 +274,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -288,6 +298,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -295,6 +306,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -316,10 +328,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -332,7 +346,10 @@
 				DEVELOPMENT_TEAM = S25TANK5XP;
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.walimaloui.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -348,7 +365,10 @@
 				DEVELOPMENT_TEAM = S25TANK5XP;
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.walimaloui.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

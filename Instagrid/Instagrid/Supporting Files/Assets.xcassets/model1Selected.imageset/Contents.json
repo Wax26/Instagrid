@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "checkLayout.png",
+      "filename" : "model1Selected.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "checkLayout@2x.png",
+      "filename" : "model1Selected@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "checkLayout@3x.png",
+      "filename" : "model1Selected@3x.png",
       "scale" : "3x"
     }
   ],
