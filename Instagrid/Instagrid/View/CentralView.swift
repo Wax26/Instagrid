@@ -7,10 +7,28 @@
 //
 
 import UIKit
+import Foundation
 
 class CentralView: UIView {
     
+    enum NumberOfPhotoAreasToFill : Int {
+        case three
+        case four
+        
+    }
     var isFilled : Bool = false
+    
+    
+    
+    func checkIfFilled() {
+        
+    }
+    
+    // En contruction
+  
+    
+    
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
