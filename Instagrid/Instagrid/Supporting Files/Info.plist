@@ -14,8 +14,6 @@
 	<string>Afin de les partager partout dans le monde</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Cela permettra de vous espionner</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
