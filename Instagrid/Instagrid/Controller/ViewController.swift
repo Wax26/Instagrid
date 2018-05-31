@@ -40,8 +40,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("case 0")
             mainSquareView.setFirstPattern()
             mainSquareView.selectedPattern = .patternOne
-            let zone = mainSquareView.center
-            print(zone)
         case 1:
             print("case 1")
             mainSquareView.setSecondPattern()
@@ -64,11 +62,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func trashButtonPushed(_ sender: UIButton) {
-        let refreshAlert = UIAlertController(title: "Deletion", message: "All pictures will be removed.", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: "Deletion", message: "All pictures will be removed. Are you sure ?", preferredStyle: UIAlertControllerStyle.alert)
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-            print("Handle Ok logic here")
             self.mainSquareView.deleteImages()
-            
         }))
         refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
         }))
@@ -78,42 +74,37 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @objc func swipeView(_ sender:UISwipeGestureRecognizer){
+      
         
         if mainSquareView.checkIfZoneIsFullWithImage() == true {
             print(mainSquareView.checkIfZoneIsFullWithImage())
             if(UIDeviceOrientationIsPortrait(UIDevice.current.orientation)) {
-                UIView.animate(withDuration: 0.5) {
+          
                     if sender.direction == .right {
                         print("right")
                     }else if sender.direction == .left {
                         print("left")
                     }else if sender.direction == .up {
                         print("up")
-                        self.mainSquareView.goUp()
+                        self.mainSquareView.squareViewGoesUp()
                         self.presentSharePopUp()
                     }else if sender.direction == .down {
                         print("down")
                     }
-                }
+                
             } else   {
-                UIView.animate(withDuration: 0.5) {
+              
                     if sender.direction == .left {
-                        
-                        self.mainSquareView.frame = CGRect(x: -self.view.frame.size.width, y: self.mainSquareView.frame.origin.y, width: self.mainSquareView.frame.size.width, height: self.mainSquareView.frame.size.height)
-                        self.presentSharePopUp()
+                            self.mainSquareView.squareViewGoesLeft()
+                   self.presentSharePopUp()
                     }
-                    
-                }
             }
         }
         
     }
     // Here has to be added the image file to provide
     func presentSharePopUp() {
-        
-        
-        
-        
+
         let image = UIImage(view : mainSquareView)
         let imageArray = [image]
         let activityViewController = UIActivityViewController( activityItems: imageArray,applicationActivities: nil)
@@ -122,15 +113,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
             if(UIDeviceOrientationIsPortrait(UIDevice.current.orientation)){
-                UIView.animate(withDuration: 0.3 ) {
-                    self.mainSquareView.getBackDown()
-                    
-                    
-                }
+                let screenHeight = UIScreen.main.bounds.height
+                let yPositon = self.mainSquareView.bounds.origin.y
+                let rapport = yPositon / screenHeight
+                _ =  UIView.animate(withDuration: 0.3, animations: {
+                    self.mainSquareView.transform = CGAffineTransform(translationX: 0, y: rapport) }, completion : nil)
                 
-                
+
             } else {
-                self.mainSquareView.getBackRight()
+                let screenWidth = UIScreen.main.bounds.width
+                let xPositon = self.mainSquareView.bounds.origin.x
+                let rapport = xPositon / screenWidth
+                _ =  UIView.animate(withDuration: 0.3, animations: {
+                    self.mainSquareView.transform = CGAffineTransform(translationX: rapport, y: 0) }, completion : nil)
+                
                 
             }
         }

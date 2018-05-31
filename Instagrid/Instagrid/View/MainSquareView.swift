@@ -129,16 +129,19 @@ class MainSquareView: UIView {
     
 
     
-    func goUp() {
-       self.frame = CGRect(x: self.frame.origin.x, y: -self.frame.size.height * CGFloat(2), width: self.frame.size.width, height: self.frame.size.height)
-       
+    func squareViewGoesUp() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.transform = CGAffineTransform(translationX: 0, y: -self.frame.size.height * 2) }, completion : nil)
+  
     }
     
-    func getBackDown() {
-    // UIview.animte
-    //   self.mainViewSquare.transform
+    func squareViewGoesLeft() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.transform = CGAffineTransform(translationX: -self.frame.size.width * 2, y: 0) }, completion : nil)
+    
+    
 
-        self.frame = CGRect(x: self.frame.origin.x, y: ((superview?.frame.size.height)! / 4) + 7, width: self.frame.size.width, height: self.frame.size.height)
+    //    self.frame = CGRect(x: self.frame.origin.x, y: ((superview?.frame.size.height)! / 4) + 7, width: self.frame.size.width, height: self.frame.size.height)
     }
     
     func getBackRight() {
@@ -149,9 +152,4 @@ class MainSquareView: UIView {
     
  
 }
-
-
-
-
-
 
