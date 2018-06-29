@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B7FA209CBD67008C9D44 /* MainSquareView.swift */; };
-		59113A1020ABC104009DDC4A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59113A0F20ABC104009DDC4A /* UIImage.swift */; };
 		5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */; };
+		59842D6F20E641D9009CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59842D6E20E641D9009CC828 /* Assets.xcassets */; };
+		59BBFE6820E64EA600E48889 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BBFE6720E64EA600E48889 /* ViewController.swift */; };
+		59EA7A0420DFAFDB00FA04FE /* MainSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7C64D20D388F90048E43E /* MainSquareModel.swift */; };
 		FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6836E206ABE3300839BF0 /* AppDelegate.swift */; };
-		FEA68371206ABE3300839BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA68370206ABE3300839BF0 /* ViewController.swift */; };
 		FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68372206ABE3300839BF0 /* Main.storyboard */; };
-		FEA68376206ABE3300839BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA68375206ABE3300839BF0 /* Assets.xcassets */; };
 		FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */; };
 		FEA68386206AC2D200839BF0 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */; };
 		FEA68388206AC2E100839BF0 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68387206AC2E100839BF0 /* Delm-Medium.otf */; };
@@ -21,13 +21,13 @@
 
 /* Begin PBXFileReference section */
 		5902B7FA209CBD67008C9D44 /* MainSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareView.swift; sourceTree = "<group>"; };
-		59113A0F20ABC104009DDC4A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
+		59842D6E20E641D9009CC828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59B7C64D20D388F90048E43E /* MainSquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareModel.swift; sourceTree = "<group>"; };
+		59BBFE6720E64EA600E48889 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FEA6836B206ABE3300839BF0 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA6836E206ABE3300839BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEA68370206ABE3300839BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FEA68373206ABE3300839BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FEA68375206ABE3300839BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEA68378206ABE3300839BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEA6837A206ABE3300839BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
@@ -49,9 +49,25 @@
 			isa = PBXGroup;
 			children = (
 				5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */,
-				59113A0F20ABC104009DDC4A /* UIImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		59B7C64C20D388F90048E43E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59B7C64D20D388F90048E43E /* MainSquareModel.swift */,
+			);
+			name = Model;
+			path = View/Model;
+			sourceTree = "<group>";
+		};
+		59BBFE6920E64EAF00E48889 /* Cotroller */ = {
+			isa = PBXGroup;
+			children = (
+				59BBFE6720E64EA600E48889 /* ViewController.swift */,
+			);
+			path = Cotroller;
 			sourceTree = "<group>";
 		};
 		FEA68362206ABE3200839BF0 = {
@@ -59,7 +75,6 @@
 			children = (
 				FEA6836D206ABE3300839BF0 /* Instagrid */,
 				FEA6836C206ABE3300839BF0 /* Products */,
-				FEA68380206ABEC300839BF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,46 +90,32 @@
 			isa = PBXGroup;
 			children = (
 				5913095320A9DF1400023BD7 /* Extensions */,
-				FEA6838A206AC32F00839BF0 /* Controller */,
+				59B7C64C20D388F90048E43E /* Model */,
+				59BBFE6920E64EAF00E48889 /* Cotroller */,
 				FEA6838B206AC34D00839BF0 /* View */,
 				FEA68389206AC30D00839BF0 /* Supporting Files */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
 		};
-		FEA68380206ABEC300839BF0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FEA68389206AC30D00839BF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */,
-				FEA68375206ABE3300839BF0 /* Assets.xcassets */,
 				FEA68387206AC2E100839BF0 /* Delm-Medium.otf */,
+				59842D6E20E641D9009CC828 /* Assets.xcassets */,
 				FEA6836E206ABE3300839BF0 /* AppDelegate.swift */,
 				FEA6837A206ABE3300839BF0 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FEA6838A206AC32F00839BF0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FEA68370206ABE3300839BF0 /* ViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		FEA6838B206AC34D00839BF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5902B7FA209CBD67008C9D44 /* MainSquareView.swift */,
-				FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */,
 				FEA68372206ABE3300839BF0 /* Main.storyboard */,
+				FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,9 +189,9 @@
 			files = (
 				FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */,
 				FEA68388206AC2E100839BF0 /* Delm-Medium.otf in Resources */,
-				FEA68376206ABE3300839BF0 /* Assets.xcassets in Resources */,
 				FEA68386206AC2D200839BF0 /* ThirstySoftRegular.otf in Resources */,
 				FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */,
+				59842D6F20E641D9009CC828 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,11 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BBFE6820E64EA600E48889 /* ViewController.swift in Sources */,
 				5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */,
-				FEA68371206ABE3300839BF0 /* ViewController.swift in Sources */,
-				59113A1020ABC104009DDC4A /* UIImage.swift in Sources */,
 				FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */,
 				5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */,
+				59EA7A0420DFAFDB00FA04FE /* MainSquareModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +354,7 @@
 				DEVELOPMENT_TEAM = S25TANK5XP;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,7 +375,7 @@
 				DEVELOPMENT_TEAM = S25TANK5XP;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

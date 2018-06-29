@@ -10,20 +10,21 @@ import UIKit
 
 class MainSquareView: UIView {
     
+    
+    // MARK: Pattern Enumeration and variable
     enum SelectedPattern : Int {
         case patternOne
         case patternTwo
         case patternThree
     }
-  
-   
     var selectedPattern: SelectedPattern = .patternOne
     
-    // Outlets
+    // MARK: Outlets Arrays
     @IBOutlet var fourSquareUIViewsArray : [UIView]!
     @IBOutlet var plusButtonsArray: [UIButton]!
     @IBOutlet var imageViewsArray : [UIImageView]!
     
+    // MARK: Separated views Outlets
     @IBOutlet var imageViewOne : UIImageView!
     @IBOutlet var imageViewTwo : UIImageView!
     @IBOutlet var imageViewThree : UIImageView!
@@ -31,11 +32,12 @@ class MainSquareView: UIView {
     
    
     
-        // Functions Setting the chosen pattern into the Main Square
-   
+    
+    // MARK: Functions to set the patterns
+    // Functions Setting the chosen pattern into the Main Square
     func setFirstPattern() {
         for view in fourSquareUIViewsArray {
-            if view.tag == 2 {
+            if view.tag == 0 {
                 view.isHidden = true
             } else {
                 view.isHidden = false
@@ -59,9 +61,44 @@ class MainSquareView: UIView {
         }
     }
     
+    
+    
+    
+    
+    // MARK: Functions to check fullness of the realted patterns
+    func checkIfPatternIsEmpty() -> Bool {
+        var patternIsEmpty : Bool = false
+        switch selectedPattern {
+        case .patternOne :
+            if imageViewTwo.image == nil && imageViewThree.image == nil && imageViewFour.image == nil {
+                patternIsEmpty = true
+            } else {
+                patternIsEmpty = false
+            }
+            return patternIsEmpty
+            
+        case .patternTwo :
+            if imageViewOne.image == nil && imageViewTwo.image == nil && imageViewThree.image == nil {
+                patternIsEmpty = true
+            } else {
+                patternIsEmpty = false
+            }
+            return patternIsEmpty
+            
+        case .patternThree :
+            if imageViewOne.image == nil && imageViewTwo.image == nil && imageViewThree == nil && imageViewFour == nil {
+                patternIsEmpty = true
+            } else {
+                patternIsEmpty = false
+            }
+            return patternIsEmpty
+        }
+        
+    }
+    
     func checkIfPatternOneIsTruelyFull() -> Bool {
         var patternIsFull : Bool = false
-        if imageViewOne.image == nil || imageViewThree.image == nil || imageViewFour.image == nil {
+        if imageViewTwo.image == nil || imageViewThree.image == nil || imageViewFour.image == nil {
             patternIsFull = false
         } else {
             patternIsFull = true
@@ -71,7 +108,7 @@ class MainSquareView: UIView {
     
     func checkIfPatternTwoIsTruelyFull() -> Bool {
         var patternIsFull : Bool = false
-        if imageViewOne.image == nil || imageViewTwo.image == nil || imageViewFour.image == nil {
+        if imageViewOne.image == nil || imageViewTwo.image == nil || imageViewThree.image == nil {
             patternIsFull = false
         } else {
             patternIsFull = true
@@ -118,6 +155,8 @@ class MainSquareView: UIView {
         return allViewsAreFull
     }
     
+    
+    // MARK: Deleting images managament
     func deleteImages() {
         for images in imageViewsArray {
             images.image = nil
@@ -127,8 +166,8 @@ class MainSquareView: UIView {
         }
     }
     
-
     
+    // MARK: Animation functions
     func squareViewGoesUp() {
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform(translationX: 0, y: -self.frame.size.height * 2) }, completion : nil)
@@ -141,14 +180,10 @@ class MainSquareView: UIView {
     
     
 
-    //    self.frame = CGRect(x: self.frame.origin.x, y: ((superview?.frame.size.height)! / 4) + 7, width: self.frame.size.width, height: self.frame.size.height)
+   
     }
     
-    func getBackRight() {
-        
-         self.frame = CGRect(x: ((superview?.frame.size.height)! / 2), y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
-    }
-
+    
     
  
 }
