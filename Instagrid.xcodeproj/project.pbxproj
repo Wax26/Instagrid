@@ -12,6 +12,7 @@
 		59842D6F20E641D9009CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59842D6E20E641D9009CC828 /* Assets.xcassets */; };
 		59BBFE6820E64EA600E48889 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BBFE6720E64EA600E48889 /* ViewController.swift */; };
 		59EA7A0420DFAFDB00FA04FE /* MainSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7C64D20D388F90048E43E /* MainSquareModel.swift */; };
+		5ED0AABA418E20AEE95062D5 /* Pods_Instagrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */; };
 		FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6836E206ABE3300839BF0 /* AppDelegate.swift */; };
 		FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68372206ABE3300839BF0 /* Main.storyboard */; };
 		FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */; };
@@ -20,11 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25F3B0B93F42C3C0ECFCFA73 /* Pods-Instagrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagrid/Pods-Instagrid.release.xcconfig"; sourceTree = "<group>"; };
 		5902B7FA209CBD67008C9D44 /* MainSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareView.swift; sourceTree = "<group>"; };
 		5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
 		59842D6E20E641D9009CC828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59B7C64D20D388F90048E43E /* MainSquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareModel.swift; sourceTree = "<group>"; };
 		59BBFE6720E64EA600E48889 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BAFF10455D01AC8BB53B0FB /* Pods-Instagrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagrid/Pods-Instagrid.debug.xcconfig"; sourceTree = "<group>"; };
+		9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA6836B206ABE3300839BF0 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA6836E206ABE3300839BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEA68373206ABE3300839BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED0AABA418E20AEE95062D5 /* Pods_Instagrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,11 +75,30 @@
 			path = Cotroller;
 			sourceTree = "<group>";
 		};
+		A974CBCFF05427B62D89BF70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E42052B917CD98918C4CABF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BAFF10455D01AC8BB53B0FB /* Pods-Instagrid.debug.xcconfig */,
+				25F3B0B93F42C3C0ECFCFA73 /* Pods-Instagrid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FEA68362206ABE3200839BF0 = {
 			isa = PBXGroup;
 			children = (
 				FEA6836D206ABE3300839BF0 /* Instagrid */,
 				FEA6836C206ABE3300839BF0 /* Products */,
+				E42052B917CD98918C4CABF3 /* Pods */,
+				A974CBCFF05427B62D89BF70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEA6837D206ABE3300839BF0 /* Build configuration list for PBXNativeTarget "Instagrid" */;
 			buildPhases = (
+				006ED0A175EFB8EE9260DB47 /* [CP] Check Pods Manifest.lock */,
 				FEA68367206ABE3300839BF0 /* Sources */,
 				FEA68368206ABE3300839BF0 /* Frameworks */,
 				FEA68369206ABE3300839BF0 /* Resources */,
+				636E97139185F02F86C27644 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +222,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		006ED0A175EFB8EE9260DB47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Instagrid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		636E97139185F02F86C27644 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Instagrid/Pods-Instagrid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instagrid/Pods-Instagrid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FEA68367206ABE3300839BF0 /* Sources */ = {
@@ -348,11 +413,12 @@
 		};
 		FEA6837E206ABE3300839BF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BAFF10455D01AC8BB53B0FB /* Pods-Instagrid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S25TANK5XP;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -369,11 +435,12 @@
 		};
 		FEA6837F206ABE3300839BF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25F3B0B93F42C3C0ECFCFA73 /* Pods-Instagrid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S25TANK5XP;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
