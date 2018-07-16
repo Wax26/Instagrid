@@ -7,7 +7,7 @@ Instagrid is a collage app that helps you share your photos with your contacts !
 
 Choose between several patterns to select the one you prefer and press the plus button to select your favorite pics !
 
-The app is operational and useful wether **offline** or **online**.
+The app is operational and useful whether **offline** or **online**.
 If network is not available save your collage for later !
 
 ## Bonus(es)
