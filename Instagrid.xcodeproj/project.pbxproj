@@ -10,9 +10,10 @@
 		5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B7FA209CBD67008C9D44 /* MainSquareView.swift */; };
 		5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */; };
 		59842D6F20E641D9009CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59842D6E20E641D9009CC828 /* Assets.xcassets */; };
-		59BBFE6820E64EA600E48889 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BBFE6720E64EA600E48889 /* ViewController.swift */; };
 		59EA7A0420DFAFDB00FA04FE /* MainSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7C64D20D388F90048E43E /* MainSquareModel.swift */; };
 		5ED0AABA418E20AEE95062D5 /* Pods_Instagrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */; };
+		FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BD21026C0900BB4870 /* CLLocationManager.swift */; };
+		FE5220C021026C1400BB4870 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BF21026C1400BB4870 /* ViewController.swift */; };
 		FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6836E206ABE3300839BF0 /* AppDelegate.swift */; };
 		FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68372206ABE3300839BF0 /* Main.storyboard */; };
 		FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */; };
@@ -26,9 +27,10 @@
 		5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
 		59842D6E20E641D9009CC828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59B7C64D20D388F90048E43E /* MainSquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareModel.swift; sourceTree = "<group>"; };
-		59BBFE6720E64EA600E48889 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BAFF10455D01AC8BB53B0FB /* Pods-Instagrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagrid/Pods-Instagrid.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5220BD21026C0900BB4870 /* CLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationManager.swift; sourceTree = "<group>"; };
+		FE5220BF21026C1400BB4870 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Instagrid/Controller/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		FEA6836B206ABE3300839BF0 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA6836E206ABE3300839BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEA68373206ABE3300839BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */,
+				FE5220BD21026C0900BB4870 /* CLLocationManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -67,12 +70,12 @@
 			path = View/Model;
 			sourceTree = "<group>";
 		};
-		59BBFE6920E64EAF00E48889 /* Cotroller */ = {
+		59BBFE6920E64EAF00E48889 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				59BBFE6720E64EA600E48889 /* ViewController.swift */,
+				FE5220BF21026C1400BB4870 /* ViewController.swift */,
 			);
-			path = Cotroller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A974CBCFF05427B62D89BF70 /* Frameworks */ = {
@@ -115,7 +118,7 @@
 			children = (
 				5913095320A9DF1400023BD7 /* Extensions */,
 				59B7C64C20D388F90048E43E /* Model */,
-				59BBFE6920E64EAF00E48889 /* Cotroller */,
+				59BBFE6920E64EAF00E48889 /* Controller */,
 				FEA6838B206AC34D00839BF0 /* View */,
 				FEA68389206AC30D00839BF0 /* Supporting Files */,
 			);
@@ -267,11 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59BBFE6820E64EA600E48889 /* ViewController.swift in Sources */,
 				5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */,
 				FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */,
 				5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */,
+				FE5220C021026C1400BB4870 /* ViewController.swift in Sources */,
 				59EA7A0420DFAFDB00FA04FE /* MainSquareModel.swift in Sources */,
+				FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
