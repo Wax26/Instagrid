@@ -10,8 +10,8 @@
 		5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B7FA209CBD67008C9D44 /* MainSquareView.swift */; };
 		5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */; };
 		59842D6F20E641D9009CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59842D6E20E641D9009CC828 /* Assets.xcassets */; };
-		59EA7A0420DFAFDB00FA04FE /* MainSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B7C64D20D388F90048E43E /* MainSquareModel.swift */; };
 		5ED0AABA418E20AEE95062D5 /* Pods_Instagrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */; };
+		FE3DB19F2102749600CFCD8D /* MainSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3DB19E2102749600CFCD8D /* MainSquareModel.swift */; };
 		FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BD21026C0900BB4870 /* CLLocationManager.swift */; };
 		FE5220C021026C1400BB4870 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BF21026C1400BB4870 /* ViewController.swift */; };
 		FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6836E206ABE3300839BF0 /* AppDelegate.swift */; };
@@ -26,9 +26,9 @@
 		5902B7FA209CBD67008C9D44 /* MainSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareView.swift; sourceTree = "<group>"; };
 		5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
 		59842D6E20E641D9009CC828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		59B7C64D20D388F90048E43E /* MainSquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareModel.swift; sourceTree = "<group>"; };
 		6BAFF10455D01AC8BB53B0FB /* Pods-Instagrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagrid/Pods-Instagrid.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3DB19E2102749600CFCD8D /* MainSquareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSquareModel.swift; path = Instagrid/Model/MainSquareModel.swift; sourceTree = SOURCE_ROOT; };
 		FE5220BD21026C0900BB4870 /* CLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationManager.swift; sourceTree = "<group>"; };
 		FE5220BF21026C1400BB4870 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Instagrid/Controller/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		FEA6836B206ABE3300839BF0 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +64,7 @@
 		59B7C64C20D388F90048E43E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				59B7C64D20D388F90048E43E /* MainSquareModel.swift */,
+				FE3DB19E2102749600CFCD8D /* MainSquareModel.swift */,
 			);
 			name = Model;
 			path = View/Model;
@@ -274,8 +274,8 @@
 				FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */,
 				5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */,
 				FE5220C021026C1400BB4870 /* ViewController.swift in Sources */,
-				59EA7A0420DFAFDB00FA04FE /* MainSquareModel.swift in Sources */,
 				FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */,
+				FE3DB19F2102749600CFCD8D /* MainSquareModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
