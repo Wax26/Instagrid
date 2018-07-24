@@ -9,6 +9,7 @@
 import CoreLocation
 
 extension ViewController : CLLocationManagerDelegate {
+    
     // MARK: - LOCATION MANAGEMENT
     
     // What happens when location fails or is disabled

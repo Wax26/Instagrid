@@ -66,8 +66,7 @@
 			children = (
 				FE3DB19E2102749600CFCD8D /* MainSquareModel.swift */,
 			);
-			name = Model;
-			path = View/Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		59BBFE6920E64EAF00E48889 /* Controller */ = {
