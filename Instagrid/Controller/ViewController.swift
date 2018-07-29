@@ -48,19 +48,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.black
-        
-        for button in mainSquareView.plusButtonsArray {
-            button.layer.shadowColor = UIColor.orange.cgColor
-            button.layer.shadowRadius = 20.0
-            button.layer.shadowOpacity = 0.9
-            button.layer.shadowOffset = CGSize.zero
-            button.layer.masksToBounds = false
-        }
-        
-        for view in mainSquareView.fourSquareUIViewsArray{
-            view.backgroundColor = UIColor.black
-        }
  
         self.locationTextField.delegate = self
         locationIcon.isHidden = false
