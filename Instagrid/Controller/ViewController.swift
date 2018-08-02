@@ -48,23 +48,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         super.viewDidLoad()
         
- 
+        
         self.locationTextField.delegate = self
+        imagePickerController.delegate = self
+        
         locationIcon.isHidden = false
+        
+        // Selecting default pattern at launch (by default, second pattern)
         patternButtonArray[1].isSelected = true
         patternButtonArray[0].isSelected = false
         patternButtonArray[2].isSelected = false
-        imagePickerController.delegate = self
-        
+      
+        // Applying the pattern to the 'Grid', here the mainSquareView
         mainSquareView.setSecondPattern()
         mainSquareView.selectedPattern = .patternTwo
         
-        // NotificationCenter here observes SwipeLabel Behavior
-        NotificationCenter.default.addObserver(self, selector: #selector(changeLabelDueToOrientation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        // NotificationCenter here observes SwipeLabel Behavior and changes its text
+        NotificationCenter.default.addObserver(self, selector: #selector(changeLabelDueToOrientation), name: UIDevice.orientationDidChangeNotification, object: nil)
         
         // Sets the Swipe Moves
         
-        let directionArray: [UISwipeGestureRecognizerDirection] = [.up, .down, .left, .right]
+        let directionArray: [UISwipeGestureRecognizer.Direction] = [.up, .down, .left, .right]
         for direction in directionArray{
             swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeView(_:)))
             mainSquareView.addGestureRecognizer(swipeGesture)
@@ -120,7 +124,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func trashButtonPushed(_ sender: UIButton) {
-        let refreshAlert = UIAlertController(title: "Deletion", message: "All pictures will be removed. Are you sure ?", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: "Deletion", message: "All pictures will be removed. Are you sure ?", preferredStyle: UIAlertController.Style.alert)
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
             self.mainSquareView.deleteImages()
                self.view.backgroundColor = #colorLiteral(red: 0.6857407689, green: 0.847186029, blue: 0.9051745534, alpha: 1)
@@ -135,7 +139,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard mainSquareView.checkIfZoneIsFullWithImage() else {
             return
         }
-        guard UIDeviceOrientationIsPortrait(UIDevice.current.orientation) else {
+        guard UIDevice.current.orientation.isPortrait else {
             if sender.direction == .left {
                 self.mainSquareView.squareViewGoesLeft()
                 self.presentSharePopUp()
@@ -157,14 +161,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Here has to be added the image file to provide
     func presentSharePopUp() {
-        let mainSquareModel = MainSquareModel()
-        guard let image = mainSquareModel.createTheImageToSend(view : mainSquareView) else {
+       
+        guard let image = mainSquareView.convertToUIImage() else {
             return}
         let imageArray = [image]
         let activityViewController = UIActivityViewController( activityItems: imageArray,applicationActivities: nil)
         // activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
-            if(UIDeviceOrientationIsPortrait(UIDevice.current.orientation)){
+            if(UIDevice.current.orientation.isPortrait){
                 UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
                     self.mainSquareView.transform = .identity
                 }, completion:nil)
@@ -188,8 +192,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    @objc  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+    @objc  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            print("No image found")
+            return
+        }
         for imageView in mainSquareView.imageViewsArray {
             if imageView.tag == pressedPlusButtonTag {
                 imageView.image = image
@@ -209,10 +216,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @objc func changeLabelDueToOrientation(){
-        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation)) {
+        if(UIDevice.current.orientation.isLandscape) {
             swipeLabel.text = "Swipe Left to share"
         }
-        if(UIDeviceOrientationIsPortrait(UIDevice.current.orientation)){
+        if(UIDevice.current.orientation.isPortrait){
             swipeLabel.text = "Swipe Up to share"
         }
     }
@@ -228,4 +235,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
  
    
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

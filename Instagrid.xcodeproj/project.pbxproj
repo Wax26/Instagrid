@@ -11,7 +11,6 @@
 		5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */; };
 		59842D6F20E641D9009CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59842D6E20E641D9009CC828 /* Assets.xcassets */; };
 		5ED0AABA418E20AEE95062D5 /* Pods_Instagrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */; };
-		FE3DB19F2102749600CFCD8D /* MainSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3DB19E2102749600CFCD8D /* MainSquareModel.swift */; };
 		FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BD21026C0900BB4870 /* CLLocationManager.swift */; };
 		FE5220C021026C1400BB4870 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BF21026C1400BB4870 /* ViewController.swift */; };
 		FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6836E206ABE3300839BF0 /* AppDelegate.swift */; };
@@ -19,6 +18,7 @@
 		FEA68379206ABE3300839BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68377206ABE3300839BF0 /* LaunchScreen.storyboard */; };
 		FEA68386206AC2D200839BF0 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */; };
 		FEA68388206AC2E100839BF0 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEA68387206AC2E100839BF0 /* Delm-Medium.otf */; };
+		FEAE0F10210F4C1E00DD72EF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE0F0F210F4C1E00DD72EF /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		59842D6E20E641D9009CC828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BAFF10455D01AC8BB53B0FB /* Pods-Instagrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagrid/Pods-Instagrid.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE3DB19E2102749600CFCD8D /* MainSquareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainSquareModel.swift; path = Instagrid/Model/MainSquareModel.swift; sourceTree = SOURCE_ROOT; };
 		FE5220BD21026C0900BB4870 /* CLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationManager.swift; sourceTree = "<group>"; };
 		FE5220BF21026C1400BB4870 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Instagrid/Controller/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		FEA6836B206ABE3300839BF0 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +37,7 @@
 		FEA6837A206ABE3300839BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA68385206AC2D100839BF0 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		FEA68387206AC2E100839BF0 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		FEAE0F0F210F4C1E00DD72EF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,16 +57,9 @@
 			children = (
 				5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */,
 				FE5220BD21026C0900BB4870 /* CLLocationManager.swift */,
+				FEAE0F0F210F4C1E00DD72EF /* UIView.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		59B7C64C20D388F90048E43E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FE3DB19E2102749600CFCD8D /* MainSquareModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		59BBFE6920E64EAF00E48889 /* Controller */ = {
@@ -116,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				5913095320A9DF1400023BD7 /* Extensions */,
-				59B7C64C20D388F90048E43E /* Model */,
 				59BBFE6920E64EAF00E48889 /* Controller */,
 				FEA6838B206AC34D00839BF0 /* View */,
 				FEA68389206AC30D00839BF0 /* Supporting Files */,
@@ -180,6 +172,7 @@
 				TargetAttributes = {
 					FEA6836A206ABE3300839BF0 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
@@ -272,9 +265,9 @@
 				5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */,
 				FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */,
 				5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */,
+				FEAE0F10210F4C1E00DD72EF /* UIView.swift in Sources */,
 				FE5220C021026C1400BB4870 /* ViewController.swift in Sources */,
 				FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */,
-				FE3DB19F2102749600CFCD8D /* MainSquareModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.walimaloui.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -453,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.walimaloui.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

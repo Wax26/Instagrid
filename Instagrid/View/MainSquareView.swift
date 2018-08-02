@@ -10,7 +10,6 @@ import UIKit
 
 class MainSquareView: UIView {
     
-    
     // MARK: Pattern Enumeration and variable
     enum SelectedPattern : Int {
         case patternOne
@@ -29,10 +28,7 @@ class MainSquareView: UIView {
     @IBOutlet var imageViewTwo : UIImageView!
     @IBOutlet var imageViewThree : UIImageView!
     @IBOutlet var imageViewFour : UIImageView!
-    
-   
-    
-    
+ 
     // MARK: Functions to set the patterns
     // Functions Setting the chosen pattern into the Main Square
     func setFirstPattern() {
@@ -60,11 +56,7 @@ class MainSquareView: UIView {
             image.isHidden = false
         }
     }
-    
-    
-    
-    
-    
+
     // MARK: Functions to check fullness of the related patterns
     func checkIfPatternIsEmpty() -> Bool {
         var patternIsEmpty : Bool = false
