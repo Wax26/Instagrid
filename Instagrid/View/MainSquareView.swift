@@ -16,6 +16,7 @@ class MainSquareView: UIView {
         case patternTwo
         case patternThree
     }
+    
     var selectedPattern: SelectedPattern = .patternOne
     
     // MARK: Outlets Arrays
