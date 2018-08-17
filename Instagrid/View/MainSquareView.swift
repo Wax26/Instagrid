@@ -11,28 +11,28 @@ import UIKit
 class MainSquareView: UIView {
     
     // MARK: Pattern Enumeration and variable
-    enum SelectedPattern : Int {
+    internal enum SelectedPattern : Int {
         case patternOne
         case patternTwo
         case patternThree
     }
     
-    var selectedPattern: SelectedPattern = .patternOne
+    internal var selectedPattern: SelectedPattern = .patternOne
     
     // MARK: Outlets Arrays
-    @IBOutlet var fourSquareUIViewsArray : [UIView]!
-    @IBOutlet var plusButtonsArray: [UIButton]!
-    @IBOutlet var imageViewsArray : [UIImageView]!
+    @IBOutlet fileprivate var fourSquareUIViewsArray : [UIView]!
+    @IBOutlet internal var plusButtonsArray: [UIButton]!
+    @IBOutlet internal var imageViewsArray : [UIImageView]!
     
     // MARK: Separated views Outlets
-    @IBOutlet var imageViewOne : UIImageView!
-    @IBOutlet var imageViewTwo : UIImageView!
-    @IBOutlet var imageViewThree : UIImageView!
-    @IBOutlet var imageViewFour : UIImageView!
- 
+    @IBOutlet fileprivate var imageViewOne : UIImageView!
+    @IBOutlet fileprivate var imageViewTwo : UIImageView!
+    @IBOutlet fileprivate var imageViewThree : UIImageView!
+    @IBOutlet fileprivate var imageViewFour : UIImageView!
+    
     // MARK: Functions to set the patterns
     // Functions Setting the chosen pattern into the Main Square
-    func setFirstPattern() {
+    internal  func setFirstPattern() {
         for view in fourSquareUIViewsArray {
             if view.tag == 0 {
                 view.isHidden = true
@@ -42,7 +42,7 @@ class MainSquareView: UIView {
         }
     }
     
-    func setSecondPattern() {
+    internal  func setSecondPattern() {
         for view in fourSquareUIViewsArray {
             if view.tag == 3 {
                 view.isHidden = true
@@ -52,14 +52,14 @@ class MainSquareView: UIView {
         }
     }
     
-    func setThirdPattern() {
+    internal    func setThirdPattern() {
         for image in fourSquareUIViewsArray {
             image.isHidden = false
         }
     }
-
+    
     // MARK: Functions to check fullness of the related patterns
-    func checkIfPatternIsEmpty() -> Bool {
+    fileprivate  func checkIfPatternIsEmpty() -> Bool {
         var patternIsEmpty : Bool = false
         switch selectedPattern {
         case .patternOne :
@@ -89,7 +89,7 @@ class MainSquareView: UIView {
         
     }
     
-    func checkIfPatternOneIsTruelyFull() -> Bool {
+    fileprivate func checkIfPatternOneIsTruelyFull() -> Bool {
         var patternIsFull : Bool = false
         if imageViewTwo.image == nil || imageViewThree.image == nil || imageViewFour.image == nil {
             patternIsFull = false
@@ -99,7 +99,7 @@ class MainSquareView: UIView {
         return patternIsFull
     }
     
-    func checkIfPatternTwoIsTruelyFull() -> Bool {
+    fileprivate func checkIfPatternTwoIsTruelyFull() -> Bool {
         var patternIsFull : Bool = false
         if imageViewOne.image == nil || imageViewTwo.image == nil || imageViewThree.image == nil {
             patternIsFull = false
@@ -109,7 +109,7 @@ class MainSquareView: UIView {
         return patternIsFull
     }
     
-    func checkIfPatternThreeIsTruelyFull() -> Bool {
+    fileprivate func checkIfPatternThreeIsTruelyFull() -> Bool {
         var patternIsFull : Bool = false
         if imageViewOne.image == nil || imageViewTwo.image == nil || imageViewThree.image == nil || imageViewFour.image == nil {
             patternIsFull = false
@@ -118,8 +118,8 @@ class MainSquareView: UIView {
         }
         return patternIsFull
     }
-
-    func checkIfZoneIsFullWithImage() -> Bool {
+    
+    internal func checkIfZoneIsFullWithImage() -> Bool {
         var allViewsAreFull : Bool = false
         switch selectedPattern {
         case .patternOne :
@@ -150,7 +150,7 @@ class MainSquareView: UIView {
     
     
     // MARK: Deleting images managament
-    func deleteImages() {
+    internal func deleteImages() {
         for images in imageViewsArray {
             images.image = nil
         }
@@ -161,19 +161,19 @@ class MainSquareView: UIView {
     
     
     // MARK: Animation functions
-    func squareViewGoesUp() {
+    internal   func squareViewGoesUp() {
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform(translationX: 0, y: -self.frame.size.height * 2) }, completion : nil)
-  
+        
     }
     
-    func squareViewGoesLeft() {
+    internal func squareViewGoesLeft() {
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform(translationX: -self.frame.size.width * 2, y: 0) }, completion : nil)
-    
-    
-
-   
+        
+        
+        
+        
     }
     
     
