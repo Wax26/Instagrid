@@ -43,12 +43,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // ImagePickerController Declaration
     let imagePickerController = UIImagePickerController()
   
+    
+    var frameView : UIView!
+    
+    
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        
+
         self.locationTextField.delegate = self
         imagePickerController.delegate = self
         
@@ -76,7 +79,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             mainSquareView.isUserInteractionEnabled = true
             mainSquareView.isMultipleTouchEnabled = true
         }
+        
+        // Keyboard Notification Center, listening to keyboard events
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        
+        
+        
+        
+        
+        
     }
+    
+    deinit{
+        NotificationCenter.default.removeObserver(self, name : NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+    }
+    
+    
+    
+    
+    
+    
     
     // MARK: - ACTIONS
 
@@ -234,7 +263,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
  
-   
+    func hideKeyboard() {
+        locationTextField.resignFirstResponder()
+        
+    }
+    
+    @objc func keyboardWillChange(notification : Notification) {
+        
+        guard let keyboardRect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        
+        if notification.name == Notification.Name.UIKeyboardWillShow || notification.name == Notification.Name.UIKeyboardWillChangeFrame {
+            view.frame.origin.y = -keyboardRect.height
+        } else {
+            view.frame.origin.y = 0
+            
+        }
+        
+    }
+    
+    func textFieldShouldReturn(_ textField : UITextField) -> Bool {
+        print("return Pressed")
+        hideKeyboard()
+        return true
+    }
+    
+    
 }
 
 
