@@ -11,18 +11,18 @@ import UIKit
 class MainSquareView: UIView {
     
     // MARK: Pattern Enumeration and variable
-    internal enum SelectedPattern : Int {
+     enum SelectedPattern : Int {
         case patternOne
         case patternTwo
         case patternThree
     }
     
-    internal var selectedPattern: SelectedPattern = .patternOne
+      var selectedPattern: SelectedPattern = .patternOne
     
     // MARK: Outlets Arrays
     @IBOutlet fileprivate var fourSquareUIViewsArray : [UIView]!
-    @IBOutlet internal var plusButtonsArray: [UIButton]!
-    @IBOutlet internal var imageViewsArray : [UIImageView]!
+    @IBOutlet var plusButtonsArray: [UIButton]!
+    @IBOutlet   var imageViewsArray : [UIImageView]!
     
     // MARK: Separated views Outlets
     @IBOutlet fileprivate var imageViewOne : UIImageView!
@@ -32,7 +32,7 @@ class MainSquareView: UIView {
     
     // MARK: Functions to set the patterns
     // Functions Setting the chosen pattern into the Main Square
-    internal  func setFirstPattern() {
+      func setFirstPattern() {
         for view in fourSquareUIViewsArray {
             if view.tag == 0 {
                 view.isHidden = true
@@ -42,7 +42,7 @@ class MainSquareView: UIView {
         }
     }
     
-    internal  func setSecondPattern() {
+      func setSecondPattern() {
         for view in fourSquareUIViewsArray {
             if view.tag == 3 {
                 view.isHidden = true
@@ -52,7 +52,7 @@ class MainSquareView: UIView {
         }
     }
     
-    internal    func setThirdPattern() {
+        func setThirdPattern() {
         for image in fourSquareUIViewsArray {
             image.isHidden = false
         }
@@ -119,7 +119,7 @@ class MainSquareView: UIView {
         return patternIsFull
     }
     
-    internal func checkIfZoneIsFullWithImage() -> Bool {
+     func checkIfZoneIsFullWithImage() -> Bool {
         var allViewsAreFull : Bool = false
         switch selectedPattern {
         case .patternOne :
@@ -150,7 +150,7 @@ class MainSquareView: UIView {
     
     
     // MARK: Deleting images managament
-    internal func deleteImages() {
+     func deleteImages() {
         for images in imageViewsArray {
             images.image = nil
         }
@@ -161,13 +161,13 @@ class MainSquareView: UIView {
     
     
     // MARK: Animation functions
-    internal   func squareViewGoesUp() {
+       func squareViewGoesUp() {
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform(translationX: 0, y: -self.frame.size.height * 2) }, completion : nil)
         
     }
     
-    internal func squareViewGoesLeft() {
+     func squareViewGoesLeft() {
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform(translationX: -self.frame.size.width * 2, y: 0) }, completion : nil)
         

@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5902B7FA209CBD67008C9D44 /* MainSquareView.swift */; };
 		5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */; };
+		5958B48E212DA1DF00136033 /* ViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958B48D212DA1DF00136033 /* ViewController+Keyboard.swift */; };
+		5958B490212DA97900136033 /* ViewController+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5958B48F212DA97900136033 /* ViewController+BackgroundColor.swift */; };
 		59842D6F20E641D9009CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59842D6E20E641D9009CC828 /* Assets.xcassets */; };
-		FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BD21026C0900BB4870 /* CLLocationManager.swift */; };
+		FE5220BE21026C0900BB4870 /* ViewController+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BD21026C0900BB4870 /* ViewController+CLLocationManagerDelegate.swift */; };
 		FE5220C021026C1400BB4870 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5220BF21026C1400BB4870 /* ViewController.swift */; };
 		FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6836E206ABE3300839BF0 /* AppDelegate.swift */; };
 		FEA68374206ABE3300839BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA68372206ABE3300839BF0 /* Main.storyboard */; };
@@ -23,9 +25,11 @@
 /* Begin PBXFileReference section */
 		5902B7FA209CBD67008C9D44 /* MainSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSquareView.swift; sourceTree = "<group>"; };
 		5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerController.swift; sourceTree = "<group>"; };
+		5958B48D212DA1DF00136033 /* ViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		5958B48F212DA97900136033 /* ViewController+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+BackgroundColor.swift"; sourceTree = "<group>"; };
 		59842D6E20E641D9009CC828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F8AC1AF411A08568934A2B1 /* Pods_Instagrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE5220BD21026C0900BB4870 /* CLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationManager.swift; sourceTree = "<group>"; };
+		FE5220BD21026C0900BB4870 /* ViewController+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		FE5220BF21026C1400BB4870 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Instagrid/Controller/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		FEA6836B206ABE3300839BF0 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA6836E206ABE3300839BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				5913095420A9DF3F00023BD7 /* UIImagePickerController.swift */,
-				FE5220BD21026C0900BB4870 /* CLLocationManager.swift */,
 				FEAE0F0F210F4C1E00DD72EF /* UIView.swift */,
 			);
 			path = Extensions;
@@ -62,6 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				FE5220BF21026C1400BB4870 /* ViewController.swift */,
+				5958B48F212DA97900136033 /* ViewController+BackgroundColor.swift */,
+				5958B48D212DA1DF00136033 /* ViewController+Keyboard.swift */,
+				FE5220BD21026C0900BB4870 /* ViewController+CLLocationManagerDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,9 +235,11 @@
 				5902B7FB209CBD67008C9D44 /* MainSquareView.swift in Sources */,
 				FEA6836F206ABE3300839BF0 /* AppDelegate.swift in Sources */,
 				5913095520A9DF3F00023BD7 /* UIImagePickerController.swift in Sources */,
+				5958B48E212DA1DF00136033 /* ViewController+Keyboard.swift in Sources */,
+				5958B490212DA97900136033 /* ViewController+BackgroundColor.swift in Sources */,
 				FEAE0F10210F4C1E00DD72EF /* UIView.swift in Sources */,
 				FE5220C021026C1400BB4870 /* ViewController.swift in Sources */,
-				FE5220BE21026C0900BB4870 /* CLLocationManager.swift in Sources */,
+				FE5220BE21026C0900BB4870 /* ViewController+CLLocationManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

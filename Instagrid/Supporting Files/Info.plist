@@ -25,7 +25,7 @@
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) always location use</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) location use</string>
+	<string>🛩$(PRODUCT_NAME) may help you automatically find your location 🛩</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>NSPhotoLibraryUsageDescription</key>
