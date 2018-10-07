@@ -20,9 +20,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     
     // The Picker Controller Declaration
     let imagePickerController = UIImagePickerController()
-
-    
-    
     
     
     
@@ -33,11 +30,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     
     
     
-    
-    
-    
     // MARK: STORYBOARD OUTLETS
-
+    
     // Outlet managing the central grid
     @IBOutlet var mainSquareView : MainSquareView!
     
@@ -55,9 +49,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     
     
     
-    
-    
     // MARK : VIEWCONTROLLER'S OVERRRIDDEN FUNCTIONS
+    
     // Sets top bar to white color
     override  var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -70,11 +63,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     
     
     
-    
     //MARK: VIEWDIDLOAD
-
-    
-  
     
     override func viewDidLoad() {
         
@@ -89,9 +78,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     }
     
     deinit{
-        NotificationCenter.default.removeObserver(self, name : NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.removeObserver(self, name : UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     
@@ -117,17 +106,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
     
     fileprivate func setAllNotificationCenters() {
         // NotificationCenter here observes SwipeLabel Behavior and changes its text
-        NotificationCenter.default.addObserver(self, selector: #selector(changeLabelDueToOrientation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeLabelDueToOrientation), name:
+            
+            UIDevice.orientationDidChangeNotification, object: nil)
         // Keyboard Notification Center, listening to keyboard events
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     fileprivate func setTheSwipeMoves() {
         // Sets the Swipe Moves
         
-        let directionArray: [UISwipeGestureRecognizerDirection] = [.up, .down, .left, .right]
+        let directionArray: [UISwipeGestureRecognizer.Direction] = [.up, .down, .left, .right]
         
         for direction in directionArray{
             swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.swipeView(_:)))
@@ -148,13 +139,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
-
- 
     
-    
-    
-    
-    
+    // Add a picture with these buttons
     @IBAction  func plusButtonTapped(_ sender: UIButton) {
         pressedPlusButtonTag = sender.tag
         manageImagePicking(sender)
@@ -170,17 +156,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
         }
     }
     
-    
- 
-    
-    
-    
+    // Deletes all images and sets initial background color
     @IBAction  func trashButtonPushed(_ sender: UIButton) {
         deleteAllImages()
     }
     
     fileprivate func deleteAllImages() {
-        let refreshAlert = UIAlertController(title: "Deletion", message: "All pictures will be removed. Are you sure ?", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: "Delete all images", message: "All pictures will be removed. Are you sure ?", preferredStyle: UIAlertController.Style.alert)
         refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
             self.mainSquareView.deleteImages()
             self.view.backgroundColor = #colorLiteral(red: 0.6857407689, green: 0.847186029, blue: 0.9051745534, alpha: 1)
@@ -190,12 +172,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
         present(refreshAlert, animated: true, completion: nil)
     }
     
-    
-    
-    
-    
-    
-    
+    // Select the wanted pattern with theses buttons
     @IBAction  func patternButtonTapped(_ sender: UIButton) {
         unselectPatternButtons()
         patternButtonArray[sender.tag].isSelected = true
@@ -224,13 +201,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
         }
     }
     
-    
-    
-    @objc  internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+    // MARK: OBC FUNCTIONS
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             print("No image found")
             return
         }
+        print("hello")
         for imageView in mainSquareView.imageViewsArray {
             if imageView.tag == pressedPlusButtonTag {
                 imageView.image = image
@@ -242,9 +219,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
                 manageBackGroundColor()
             }
             dismiss(animated:true, completion: nil)
+            print(info)
         }
     }
-
+    
     @objc fileprivate func swipeView(_ sender:UISwipeGestureRecognizer){
         if mainSquareView.checkIfZoneIsFullWithImage(){
             guard UIDevice.current.orientation.isPortrait else {
@@ -268,7 +246,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
         }
     }
     
-
+    
     @objc fileprivate func changeLabelDueToOrientation(){
         if(UIDevice.current.orientation.isLandscape) {
             swipeLabel.text = "Swipe Left to share"

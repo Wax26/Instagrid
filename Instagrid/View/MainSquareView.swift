@@ -171,9 +171,6 @@ class MainSquareView: UIView {
         UIView.animate(withDuration: 0.2, animations: {
             self.transform = CGAffineTransform(translationX: -self.frame.size.width * 2, y: 0) }, completion : nil)
         
-        
-        
-        
     }
     
     

@@ -18,18 +18,16 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSContactsUsageDescription</key>
-	<string>Instagrid nécessite l&apos;accès à vos contacts</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) always location use</string>
+	<string>Instagrid nécessite l'accès à vos contacts</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>🛩$(PRODUCT_NAME) may help you automatically find your location 🛩</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>$(PRODUCT_NAME)</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) photo Use</string>
+	<string>$(PRODUCT_NAME) souhaite accéder à vos photos</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

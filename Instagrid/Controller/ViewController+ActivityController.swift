@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import UIKit 
 
 extension ViewController  {
     // Here has to be added the image file to provide
