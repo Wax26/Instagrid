@@ -16,6 +16,7 @@ extension ViewController  {
         
         guard let image = mainSquareView.convertToUIImage() else {
             return}
+        
         let activityViewController = UIActivityViewController( activityItems: [image],applicationActivities: nil)
         // activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
