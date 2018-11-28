@@ -207,7 +207,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UITextFi
             print("No image found")
             return
         }
-        print("hello")
+        
         for imageView in mainSquareView.imageViewsArray {
             if imageView.tag == pressedPlusButtonTag {
                 imageView.image = image

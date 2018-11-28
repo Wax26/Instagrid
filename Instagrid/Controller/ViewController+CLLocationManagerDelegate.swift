@@ -22,10 +22,10 @@ extension ViewController : CLLocationManagerDelegate {
         if let containsPlacemark = placemark {
             locationManager.startUpdatingLocation()
             let locality = (containsPlacemark.location != nil) ? containsPlacemark.locality : ""
-            let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
+           // let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
             let administrativeArea = (containsPlacemark.administrativeArea != nil ) ? containsPlacemark.administrativeArea : ""
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
-            self.locationTextField.text = postalCode! + " " + locality!
+            self.locationTextField.text = " " + locality!
             self.locationTextField.text?.append("\n" + administrativeArea! + ", " + country!)
             // stop update location to avoi textField to be overwritten
             locationManager.stopUpdatingLocation()
